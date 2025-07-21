@@ -1,0 +1,52 @@
+BACKEND
+path:/signup
+method:POST
+Body:
+{
+  name:"abc",email:"abc@gmail.com",password:"1234"
+}
+Response:
+server Error:500
+User Already exist:409
+sucess:201
+
+path:/login
+Body:
+{email:"abc@gmail.com",password:"1234"}
+Response:
+server Error:500
+User does not exist:401
+sucess:201
+....................................
+Server side Validation using JoI Library ------>
+....................................
+Middleware to intercept j token
+header
+authorization:jwttoken
+/products GET
+{
+  {name:"mobile",price:10000},
+  {name:"watch",price:5000}
+}
+..................................................................................................
+FRONT-END
+..........
+*Routing
+    .private Routing
+*Login page
+    .client side Validation
+    .Login A integration than store JWT token
+*signup
+    .client side Validation
+    .signup API integration
+*HOME page
+    .show logged in username
+    .show logout button
+    .call authnticated/products Api to demonstrate how you can use Jwt token for subsequent
+    api calls                 
+
+
+// Learning joi and cors
+
+
+dljjZfx8x4ZTu0ax
